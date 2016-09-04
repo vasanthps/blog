@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vasanth's Tech Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="banner_main" class="banner">
+  <div class="banner-inner container">
+    <h1 class="banner-lead">
+      <span id="greeting_text" class="banner-lead-1"></span>
+    </h1>
+  </div>
+  <div style="height:10pc;"></div>
+  <h6 id="description_text" class="banner-lead-2"></h6>
+  <div class="banner-buttons">
+    <a class="button button-primary">home</a>
+    <a class="button button-primary">tech</a>
+    <a class="button button-primary">travel</a>
+    <a class="button button-primary">ramblings</a>
+</div>
+</div>
+<script>
+  var bannerMap = { 1: {
+    greeting: 'Hiya!',
+    description: 'Taken while I met him at one of those upscale restaurants in New York. <br/> Just Kidding! <br/> Wax statue of Will Smith at Madame Tussauds, Bangkok. <br/> Don\'t forget to read more of my travel stories!',
+    darkText: false
+  },
+  2: {
+    greeting: 'Sawasdee!',
+    description: '<br/><br/><br/>',
+    darkText: true
+  },
+  3: {
+    greeting: 'Vanakkam!',
+    description: '<span style="color:white">Hungry yet?<br/> A pic from my half finished meal at Khao san area, Bangkok. <br/> Don\'t forget to read more of my travel stories!<span>',
+    darkText: false
+  },
+  4: {
+    greeting: 'Hola!',
+    description: '<span style="color:white">Thean Hou temple, Kuala Lumpur</span>',
+    darkText: false
+  },
+  5: {
+    greeting: 'Hello!',
+    description: 'Sanam Chandra palace, Nakhon Pathom',
+    darkText: false
+  }};
+  var bannerNo = Math.ceil(Math.random() * 5);
+  document.getElementById("banner_main").className += ' banner_' + bannerNo;
+  var bannerData = bannerMap[bannerNo];
+  document.getElementById("greeting_text").innerHTML = bannerData.greeting;
+  document.getElementById("description_text").innerHTML = bannerData.description;
+  if(bannerData.darkText) {
+      document.getElementById("greeting_text").className += ' dark-text';
+      document.getElementById("description_text").className += ' dark-text';
+  }
+</script>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div class="clear">
+         <img class="footer-left-col" src="/img/fb_pic.jpg" />
+         <div class="footer-mid-col"></div>
+        <div class="footer-right-col">
+            Nice to see ya stranger! <br/><br/>
+            <span class="footer-text-strong">whoami</span><br/>
+            A Web developer by profession and passion. I love to write code, brainstorm ideas, participate in weekend meetups and hackathons. Other than the time I code, I also spend time in traveling, hanging out with friends, reading on startups, Coursera and Youtube.<br/>
+            I primarily work on Javascript; Angular and Node to be precise. I also play around with Ionic, Android and Windows phone apps during my free time.<br/>
+            I daydream of having my own startup some day. Well, this website is a start.<br/><br/><br/>
+            <span class="footer-text-strong">postbox</span><br/>
+            If you would like to speak with me, shoot me a mail at <a href="mailto:sayhello@vasanthsriram.com">sayhello@vasanthsriram.com</a><br/>
+            <ul class="footer-social-list icon-list-inline">
+                <li><a href="https://facebook.com/vasanthps" target="_blank" title="Facebook"><img class="facebook" /></a></li>
+                <li><a href="https://twitter.com/vasanthps" target="_blank" title="Twitter"><img class="twitter" /></a></li>
+                <li><a href="https://linkedin.com/in/vasanthps" target="_blank" title="LinkedIn"><img class="linkedin" /></a></li>
+                <li><a href="https://github.com/vasanthps" target="_blank" title="Github"><img class="github" /></a></li>
+                <li><a href="https://instagram.com/vasanthps" target="_blank" title="Instagram"><img class="instagram" /></a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="copyright">
+    <div class="copyright-text">Copyright &copy; 2016 vasanthsriram.com</div>
+    <a class="copyright-small-text" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+    <div class="copyright-small-text">All content/Images in this site is owned by vasanthsriram.com, unless explicitly mentioned. </div>
+</div>
+
+<script id="live-reload" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>
