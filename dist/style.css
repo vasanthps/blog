@@ -1010,13 +1010,13 @@ html input[disabled] {
   .footer strong {
     color: #fff; }
 
-
   .footer-left-col {
       float: left;
       max-width: 50%;
       text-align: left;
       margin: 0px;
       max-height: 500px;
+      margin-top: 0%;
   }
 
   .footer-mid-col {
@@ -1031,6 +1031,21 @@ html input[disabled] {
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       color: #fff;
       font-size: 15px;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+      .footer-left-col {
+          float: none;
+          max-width: 100%;
+          margin-top: 5%;
+      }
+
+      .footer-right-col {
+          float: none;
+          text-align: center;
+          margin-left:10%;
+          margin-right:10%;
+      }
   }
 
   .footer-text-strong {
