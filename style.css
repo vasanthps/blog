@@ -856,7 +856,7 @@ html input[disabled] {
       padding: 50px 60px; } }
 
 .banner_1 {
-    background: url(../img/banner1.jpg) 0 0 no-repeat;
+    background: url(../img/banner1.jpg) center center no-repeat;
 }
 
 .banner_2 {
